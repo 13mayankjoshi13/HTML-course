@@ -1,0 +1,114 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #e23744;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+}
+
+/* ===== NAVIGATION ===== */
+header ul {
+    list-style: none;          /* removes bullets */
+    display: flex;             /* horizontal */
+    gap: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    opacity: 0.7;
+}
+
+/* ===== MAIN SECTION ===== */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== FORM CARD ===== */
+.form-card {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 600px;
+    max-width: 90%;
+}
+
+.form-card h1 {
+    margin-bottom: 30px;
+    color: #e23744;
+}
+
+/* ===== FORM ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #e23744;
+    outline: none;
+    box-shadow: 0 0 8px rgba(226,55,68,0.3);
+}
+
+button {
+    padding: 14px;
+    background: #e23744;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c71f2c;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
