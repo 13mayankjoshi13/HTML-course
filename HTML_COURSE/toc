@@ -1,0 +1,54 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    string input;
+    cout << "Enter string (format wCwR): ";
+    cin >> input;
+    stack<char> st;
+    // Check if exactly one 'C' exists
+    int countC = 0;
+    for(char c : input)
+        if(c == 'C') countC++;
+    if(countC != 1) {
+        cout << "Rejected" << endl;
+        return 0;
+    }
+    bool beforeC = true;
+    for(char c : input) {
+        if(c == 'C') {
+            beforeC = false;
+            continue;
+        }
+        if(beforeC) {
+            // Push part (w)
+            if(c == '0' || c == '1')
+                st.push(c);
+            else {
+                cout << "Rejected" << endl;
+                return 0;
+            }
+        }
+        else {
+            // Matching reverse part (wR)
+            if(c == '0' || c == '1') {
+                if(st.empty() || st.top() != c) {
+                    cout << "Rejected" << endl;
+                    return 0;
+                }
+                st.pop();
+            }
+            else {
+                cout << "Rejected" << endl;
+                return 0;
+            }
+        }
+    }
+    if(st.empty())
+        cout << "Accepted" << endl;
+    else
+        cout << "Rejected" << endl;
+
+    return 0;
+}
