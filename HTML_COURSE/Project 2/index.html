@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mayank Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- MOBILE TOGGLE -->
+<div class="menu-toggle">☰</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="profile">
+        <img src="assets/profile.jpg" alt="">
+        <h2>Mayank</h2>
+    </div>
+
+    <ul class="nav">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="theme-toggle">
+        <button id="themeBtn">🌙 Dark Mode</button>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<section id="home" class="section home reveal">
+    <div>
+        <h4>HI THERE!</h4>
+        <h1>I'M <span>Mayank</span></h1>
+        <p>AI & ML Developer | Designer | Creator</p>
+        <button class="btn">More About Me</button>
+    </div>
+
+    <img src="assets/profile.jpg" class="hero-img">
+</section>
+
+<section id="about" class="section reveal">
+    <h2 class="section-title">ABOUT ME</h2>
+    <p>I build modern web & AI projects.</p>
+</section>
+
+<section id="resume" class="section reveal">
+    <h2 class="section-title">RESUME</h2>
+    <p>B.Tech AI & ML | Freelancer</p>
+</section>
+
+<section id="portfolio" class="section reveal">
+    <h2 class="section-title">PORTFOLIO</h2>
+
+    <!-- FILTER BUTTONS -->
+    <div class="filter-buttons">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="web">Web</button>
+        <button data-filter="design">Design</button>
+        <button data-filter="photo">Photography</button>
+    </div>
+
+    <div class="portfolio-grid">
+        <div class="item web"><img src="assets/portfolio1.jpg"></div>
+        <div class="item design"><img src="assets/portfolio2.jpg"></div>
+        <div class="item photo"><img src="assets/portfolio3.jpg"></div>
+        <div class="item web"><img src="assets/portfolio4.jpg"></div>
+    </div>
+</section>
+
+<section id="testimonials" class="section reveal">
+    <h2 class="section-title">TESTIMONIALS</h2>
+    <div class="card">Amazing Work!</div>
+</section>
+
+<section id="contact" class="section reveal">
+    <h2 class="section-title">CONTACT</h2>
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button class="btn">Send</button>
+    </form>
+</section>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

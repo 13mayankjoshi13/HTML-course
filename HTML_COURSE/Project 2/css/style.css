@@ -1,0 +1,177 @@
+:root {
+    --yellow: #ffb400;
+    --dark: #111;
+    --light: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    transition: 0.3s;
+}
+
+.dark {
+    background: #111;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: var(--yellow);
+    height: 100vh;
+    position: fixed;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.profile img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    margin: 15px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav a.active {
+    color: white;
+}
+
+/* MAIN */
+.main {
+    margin-left: 250px;
+    width: 100%;
+}
+
+.section {
+    padding: 80px;
+    min-height: 100vh;
+}
+
+.section-title {
+    font-size: 40px;
+    border-bottom: 4px solid var(--yellow);
+    display: inline-block;
+}
+
+/* HERO */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+/* BUTTON */
+.btn {
+    background: var(--yellow);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* PORTFOLIO */
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+    .sidebar {
+        left: -250px;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
